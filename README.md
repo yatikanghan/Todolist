@@ -5,4 +5,5 @@ first of all install
 4. redirect
 5. SQLAlchemy
 6. datetime
-7. 
+
+python file run
