@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="headermain">
+    <h1>Todo Update</h1>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="mainform">
+      <form action="/update/{{updatetodo.sno}}" method="post">
+        <h2>Add Todo items</h2>
+        <label for="">Title</label>
+        <input type="text" name="todotitle" value="{{updatetodo.title}}" class="form-control">
+        <br>
+        <label for="">Description</label>
+        <input type="text" name="tododesc" value="{{updatetodo.desc}}" class="form-control">
+        <br>
+        <button type="submit" href="/" class="btn btn-primary">Update</button>
+      </form>
+    </div>
+    
+  </div>
+</div>
+</body>
+</html>
